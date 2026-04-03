@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Reel Counter",
+  "version": "1.0",
+  "description": "Counts reels on Instagram and YouTube",
+
+  "permissions": ["storage"],
+
+  "host_permissions": [
+    "*://www.instagram.com/*",
+    "*://www.youtube.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.instagram.com/*",
+        "*://www.youtube.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
